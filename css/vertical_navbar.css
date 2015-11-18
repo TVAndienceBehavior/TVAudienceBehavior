@@ -1,0 +1,36 @@
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .navbar {
+    border-radius:0;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    height:100%;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+}
+
+#side-nav {
+  height:100%;
+  position:fixed;
+}
+
+#main-content {
+  float:right;
+  margin-top:0px;
+}

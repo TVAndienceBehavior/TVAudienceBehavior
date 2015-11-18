@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>SPARK WEB UI</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/ChartNew.js"></script>
+  <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/online-time.js"></script>
+  <script src="js/audience-rating.js"></script>
+  <script src="js/index.js"></script>
+
+
+  <link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/vertical_navbar.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="row">
+    <div class="col-sm-3" id="side-nav">
+      <div class="sidebar-nav">
+        <div class="navbar navbar-inverse" role="navigation">
+          <div class="navbar-header">
+          </div>
+
+          <div class="navbar-collapse collapse sidebar-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="javascript:void(0);" onclick="clearCanvas()" >首页</a></li>
+              <br>
+              <li><a id="rating" href="javascript:void(0);" onclick="loadAudienceRatingData()">收视情况</a></li>
+              <li><a href="javascript:void(0);">购买情况</a></li>
+              <li><a id="online" href="javascript:void(0);" onclick="loadData()">在线时间</a></li>
+              <li><a href="javascript:void(0);">换台行为</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-9" id="main-content">
+      <div>
+        <div id="canvas-container" style="width:60%">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

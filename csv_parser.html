@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>test</title>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "data/cars.csv",
+            dataType: "text",
+            success: function(data) {processData(data);}
+         });
+    });
+
+    function processData(allText) {
+        var allTextLines = allText.split(/\r\n|\n/);
+        var headers = allTextLines[0].split(',');
+        var lines = [];
+
+        for (var i=1; i<allTextLines.length; i++) {
+            var data = allTextLines[i].split(',');
+            if (data.length == headers.length) {
+                var tarr = [];
+                for (var j=0; j<headers.length; j++) {
+                    tarr.push(data[j].replace(/\"/g, ""));
+                }
+                lines.push(tarr);
+            }
+        }
+        console.log(lines);
+    }
+    </script>
+</head>
+
+<body>
+    <h1>HELLO!</h1>
+</body>
+
+</html>
